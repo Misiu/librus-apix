@@ -16,7 +16,7 @@ def _test_attendance_data(attendance: Attendance, log: Logger):
     assert isinstance(attendance.excursion, bool)
     for key, val in strings:
         assert isinstance(val, str)
-        if val == "":
+        if val == "" and key != "topic":
             log.warning(f"{key} is an empty string")
 
 

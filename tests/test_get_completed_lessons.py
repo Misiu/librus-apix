@@ -16,7 +16,7 @@ def _test_completed_lesson_data(lesson: Lesson, log: Logger):
         assert isinstance(lesson.lesson_number, str)
     for key, val in strings:
         assert isinstance(val, str)
-        if val == "":
+        if val == "" and key != "attendance_symbol":
             log.warning(f"{key} is an empty string")
 
 
